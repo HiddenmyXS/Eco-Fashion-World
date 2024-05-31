@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "227334600724",
+    "project_id": "eco-fashion-world",
+    "storage_bucket": "eco-fashion-world.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227334600724:android:1f527b4dee49fa7341cf01",
+        "android_client_info": {
+          "package_name": "cdk.cybertwenty.iybc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFJh9IUzrGMKmpUWTi8esIX91llmvR-Ww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
