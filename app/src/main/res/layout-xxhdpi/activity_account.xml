@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/account_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/btn_return_account"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/return_btn_day">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/history_name_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btn_return_account"
+                android:text="My Account"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/body_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/account_header"
+            android:layout_above="@id/bottom">
+
+            <RelativeLayout
+                android:id="@+id/cardview_about_account"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#75352D"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="italic"
+                            android:text="MY MEMBERSHIP CARD"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="20dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/status_profile_card"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                app:cardCornerRadius="50dp">
+
+                                <ImageView
+                                    android:id="@+id/photo_firebase_card"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/photo_profile_example">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/name_account_in_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="M Dhiya Altamis Mifzal Maula"
+                                android:layout_toRightOf="@id/status_profile_card"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="@color/white">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/since_join"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Joined at February 2024"
+                                android:layout_below="@id/name_account_in_card"
+                                android:layout_toRightOf="@id/status_profile_card"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="20dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/white">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/description_below"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Classic Membership"
+                                android:layout_below="@id/since_join"
+                                android:layout_toRightOf="@id/status_profile_card"
+                                android:layout_marginTop="21dp"
+                                android:layout_marginLeft="20dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/white">
+
+                            </TextView>
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_in_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Preference and Settings"
+                android:layout_below="@id/cardview_about_account"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="14dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/cardview_settings_account"
+                android:layout_width="match_parent"
+                android:layout_below="@id/text_in_card"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/text_in_cards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="This feature is on development"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/text_in_cards2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_in_cards"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="We will announce soon..!"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="-10dp"
+                android:backgroundTint="#ECECEC"
+                app:cardCornerRadius="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/home_bottom_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="45dp">
+
+                        <ImageView
+                            android:id="@+id/home_image_1"
+                            android:layout_width="80px"
+                            android:layout_height="80px"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/main_home">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/home_image_1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:textSize="11dp"
+                            android:text="Home"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_bottom_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/menu_bottom_cardview"
+                            android:layout_width="80px"
+                            android:layout_height="80px"
+                            android:layout_marginTop="3dp"
+                            app:cardCornerRadius="8dp"
+                            android:backgroundTint="#454545">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/more_icon"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:layout_marginBottom="7dp">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@id/menu_bottom_cardview"
+                            android:textSize="11dp"
+                            android:text="Menu"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/profile_bottom_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="40dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/status_profile"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentTop="true"
+                            app:cardCornerRadius="50dp">
+
+                            <ImageView
+                                android:id="@+id/photo_firebase"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/photo_profile_example">
+
+                            </ImageView>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/status_profile"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="User Profile"
+                            android:textColor="@color/black"
+                            android:textSize="11dp">
+
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
