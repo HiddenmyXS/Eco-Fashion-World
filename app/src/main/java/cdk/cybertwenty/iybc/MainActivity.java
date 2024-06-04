@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MainActivity.this, HistoryActivity.class);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_out_left);
                 startActivity(intent);
                 finish();
             }
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                Intent intent = new Intent (MainActivity.this, AccountInformation.class);
+                Intent intent = new Intent (MainActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

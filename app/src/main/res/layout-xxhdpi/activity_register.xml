@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text_1"
-                    android:text="Please sign up or login to your account"
+                    android:text="Please complete the form to continue app"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="15dp"
@@ -67,17 +67,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text_2"
-                    android:text="Email Address"
+                    android:text="Username"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
-                    android:textSize="13dp"
-                    android:layout_marginTop="20dp"
+                    android:textSize="14dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="15dp">
 
                 </TextView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardview_address"
+                    android:id="@+id/register_username"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
@@ -87,7 +87,60 @@
                     app:cardCornerRadius="3dp">
 
                     <EditText
-                        android:id="@+id/username"
+                        android:id="@+id/username_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#8FFFFFFF"
+                        android:padding="10dp"
+                        android:hint="Enter your username">
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/email_register_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/register_username"
+                    android:text="Email Address"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp">
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/register_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/email_register_text"
+                    app:cardCornerRadius="3dp">
+
+                    <EditText
+                        android:id="@+id/email_register"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#8FFFFFFF"
@@ -99,31 +152,31 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/text_password"
+                    android:id="@+id/password_register_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/cardview_address"
+                    android:layout_below="@id/register_address"
                     android:text="Password"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
-                    android:textSize="13dp"
-                    android:layout_marginTop="20dp"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp">
 
                 </TextView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardview_password"
+                    android:id="@+id/register_password"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_below="@id/text_password"
+                    android:layout_below="@id/password_register_text"
                     app:cardCornerRadius="3dp">
 
                     <EditText
-                        android:id="@+id/password"
+                        android:id="@+id/password_register"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#8FFFFFFF"
@@ -139,7 +192,7 @@
                     android:id="@+id/reset_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/cardview_password"
+                    android:layout_below="@id/register_password"
                     android:text="Forget Password?"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
@@ -151,11 +204,11 @@
                 </TextView>
 
                 <Button
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_register"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Login"
-                    android:layout_marginTop="50dp"
+                    android:text="Sign Up"
+                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_below="@id/reset_button">
@@ -165,7 +218,7 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/btn_login"
+                    android:layout_below="@id/btn_register"
                     android:layout_marginTop="20dp"
                     android:layout_centerInParent="true">
 
@@ -173,7 +226,7 @@
                         android:id="@+id/text_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New user?"
+                        android:text="Have account already?"
                         android:textColor="@color/black"
                         android:fontFamily="sans-serif-medium"
                         android:textSize="15dp"
@@ -182,10 +235,10 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/btn_create_account"
+                        android:id="@+id/btn_login_account"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sign Up"
+                        android:text="Sign In"
                         android:textColor="#FF5722"
                         android:fontFamily="sans-serif-medium"
                         android:textSize="15dp"
