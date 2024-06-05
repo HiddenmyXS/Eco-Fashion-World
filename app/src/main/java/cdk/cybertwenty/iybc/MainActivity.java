@@ -8,10 +8,11 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     private String collectData;
-
     RelativeLayout view_myHistory_btn;
     RelativeLayout view_myCart_btn;
     RelativeLayout profile_bottom_picture;

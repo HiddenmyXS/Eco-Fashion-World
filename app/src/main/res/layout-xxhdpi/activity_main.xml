@@ -128,6 +128,7 @@
                     android:id="@+id/promo_cardview_1"
                     android:layout_width="330px"
                     android:layout_height="190dp"
+                    android:layout_margin="15dp"
                     android:layout_alignParentBottom="true"
                     android:layout_toLeftOf="@id/promo_cardview_2"
                     android:layout_marginRight="5dp"
@@ -141,7 +142,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/promo_cardview_1_image"
                             android:layout_width="300px"
-                            android:layout_height="390px"
+                            android:layout_height="360px"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="6dp"
                             android:layout_marginRight="6dp"
@@ -233,6 +234,7 @@
                     android:id="@+id/promo_cardview_3"
                     android:layout_width="330px"
                     android:layout_height="190dp"
+                    android:layout_margin="15dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="5dp"
                     android:layout_toRightOf="@id/promo_cardview_2"
@@ -246,7 +248,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/promo_cardview_3_image"
                             android:layout_width="300px"
-                            android:layout_height="390px"
+                            android:layout_height="360px"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="6dp"
                             android:layout_marginRight="6dp"
@@ -288,10 +290,10 @@
                 android:id="@+id/recommended_text_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="12dp"
                 android:layout_below="@id/categories_best_sale"
-                android:text="Based on Category"
+                android:text="Category"
                 android:textSize="15dp"
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/black">
@@ -464,7 +466,7 @@
                             android:layout_width="80px"
                             android:layout_height="80px"
                             android:layout_marginTop="3dp"
-                            app:cardCornerRadius="8dp"
+                            app:cardCornerRadius="30dp"
                             android:backgroundTint="#454545">
 
                             <RelativeLayout
@@ -521,7 +523,7 @@
                                 android:id="@+id/photo_firebase"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                android:src="@drawable/photo_profile_example">
+                                android:src="@drawable/user_profile">
 
                             </ImageView>
 
