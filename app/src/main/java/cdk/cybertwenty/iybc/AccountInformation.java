@@ -7,19 +7,25 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import org.w3c.dom.Text;
 
 public class AccountInformation extends AppCompatActivity {
 
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
     RelativeLayout home_btn;
+    CardView btn_log_out;
     ImageView btn_return;
+    TextView name_account_card, email_account_address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +38,11 @@ public class AccountInformation extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         // Functions //
+        name_account_card = (TextView) findViewById(R.id.name_account_in_card);
+        email_account_address = (TextView) findViewById(R.id.email_account_address);
         home_btn = (RelativeLayout) findViewById(R.id.home_bottom_bar);
         btn_return = (ImageView) findViewById(R.id.btn_return_account);
+        btn_log_out = (CardView) findViewById(R.id.btn_logout);
 
         // Firebase Current //
         firebaseAuth = FirebaseAuth.getInstance();
@@ -43,6 +52,10 @@ public class AccountInformation extends AppCompatActivity {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser userName = mAuth.getCurrentUser();
 
+        // Show Display Name //
+        name_account_card.setText(firebaseUser.getDisplayName());
+        email_account_address.setText(firebaseUser.getEmail());
+
 
         // onClick //
         home_btn.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +64,7 @@ public class AccountInformation extends AppCompatActivity {
 
                 Intent intent = new Intent (AccountInformation.this, MainActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -61,7 +74,17 @@ public class AccountInformation extends AppCompatActivity {
 
                 Intent intent = new Intent (AccountInformation.this, MainActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        btn_log_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(myIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                FirebaseAuth.getInstance().signOut();
             }
         });
     }
@@ -73,6 +96,6 @@ public class AccountInformation extends AppCompatActivity {
     public void onBackPressed() {
         Intent backIntent = new Intent(AccountInformation.this, MainActivity.class);
         startActivity(backIntent);
-        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

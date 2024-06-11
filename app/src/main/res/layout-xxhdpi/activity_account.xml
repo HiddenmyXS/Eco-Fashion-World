@@ -20,7 +20,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/return_btn_day">
+                android:src="@drawable/baseline_arrow_back_ios_new_24">
 
             </ImageView>
 
@@ -93,10 +93,10 @@
                                 app:cardCornerRadius="50dp">
 
                                 <ImageView
-                                    android:id="@+id/photo_firebase_card"
+                                    android:id="@+id/account_photo_firebase_card"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/photo_profile_example">
+                                    android:src="@drawable/user_profile">
 
                                 </ImageView>
 
@@ -107,8 +107,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
-                                android:text="M Dhiya Altamis Mifzal Maula"
+                                android:text="Guest Account"
                                 android:layout_toRightOf="@id/status_profile_card"
+                                android:textSize="16dp"
                                 android:layout_marginTop="15dp"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/white">
@@ -116,11 +117,11 @@
                             </TextView>
 
                             <TextView
-                                android:id="@+id/since_join"
+                                android:id="@+id/email_account_address"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
-                                android:text="Joined at February 2024"
+                                android:text="guestaccount@gmail.com"
                                 android:layout_below="@id/name_account_in_card"
                                 android:layout_toRightOf="@id/status_profile_card"
                                 android:layout_marginTop="2dp"
@@ -135,8 +136,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
-                                android:text="Classic Membership"
-                                android:layout_below="@id/since_join"
+                                android:text="Software Engineer - Eco Fashion World"
+                                android:layout_below="@id/email_account_address"
                                 android:layout_toRightOf="@id/status_profile_card"
                                 android:layout_marginTop="21dp"
                                 android:layout_marginLeft="20dp"
@@ -187,33 +188,174 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/text_in_cards"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="This feature is on development"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-                            android:textColor="@color/black">
+                        <RelativeLayout
+                            android:id="@+id/btn_transaction_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp">
 
-                        </TextView>
+                            <ImageView
+                                android:id="@+id/transaction_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/baseline_list_alt_24">
 
-                        <TextView
-                            android:id="@+id/text_in_cards2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/text_in_cards"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="We will announce soon..!"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-                            android:textColor="@color/black">
+                            </ImageView>
 
-                        </TextView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/transaction_image"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Transaction Bill"
+                                android:textColor="@color/black">
+
+                            </TextView>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_app_tour_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/btn_transaction_account"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp">
+
+                            <ImageView
+                                android:id="@+id/app_tour_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/baseline_list_alt_24">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/app_tour_image"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Discovery this app"
+                                android:textColor="@color/black">
+
+                            </TextView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_help_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/btn_app_tour_account"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp">
+
+                            <ImageView
+                                android:id="@+id/help_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/baseline_list_alt_24">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/help_image"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Help"
+                                android:textColor="@color/black">
+
+                            </TextView>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_settings_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/btn_help_account"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp">
+
+                            <ImageView
+                                android:id="@+id/settings_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/baseline_list_alt_24">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/settings_image"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Settings"
+                                android:textColor="@color/black">
+
+                            </TextView>
+
+                        </RelativeLayout>
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:backgroundTint="#C63333"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:text="SIGN OUT"
+                                    android:textColor="@color/white">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
 
                     </RelativeLayout>
 

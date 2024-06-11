@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -9,71 +10,102 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/cart_header"
+            android:id="@+id/main_header"
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
 
-            <ImageView
-                android:id="@+id/btn_return_cart"
-                android:layout_width="35dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/baseline_arrow_back_ios_new_24">
-
-            </ImageView>
-
-            <TextView
-                android:id="@+id/cart_name_activity"
+            <RelativeLayout
+                android:id="@+id/header_function"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <RelativeLayout
+                    android:id="@+id/view_myHistory"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/view_myCart"
+                    android:layout_marginRight="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/history_icon_day">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/view_myCart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/cart_icon_day">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/btn_return_cart"
-                android:text="My Cart"
-                android:textSize="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/black">
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@id/header_function"
+                app:cardCornerRadius="5dp">
 
-            </TextView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Search Ecoprint Product"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp">
+
+                    </EditText>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/body_cart"
+            android:id="@+id/search_body"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/cart_header"
-            android:layout_above="@id/bottom">
+            android:layout_above="@id/bottom"
+            android:layout_below="@id/main_header"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="2dp">
 
-            <RelativeLayout
-                android:id="@+id/empty_cart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="visible">
-
-                <ImageView
-                    android:id="@+id/empty_image"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/baseline_add_shopping_cart_24"
-                    android:layout_centerInParent="true">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_below="@id/empty_image"
-                    android:text="To view cart added some item to view checkout price"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="@color/black">
-
-                </TextView>
-
-            </RelativeLayout>
 
         </RelativeLayout>
 
@@ -105,9 +137,9 @@
                             android:id="@+id/home_image_1"
                             android:layout_width="80px"
                             android:layout_height="80px"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="true"
                             android:layout_marginTop="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentTop="true"
                             android:src="@drawable/main_home">
 
                         </ImageView>
@@ -186,7 +218,7 @@
                         android:layout_marginRight="40dp">
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/status_profile"
+                            android:id="@+id/status_main_profile"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_centerInParent="true"
@@ -194,10 +226,9 @@
                             app:cardCornerRadius="50dp">
 
                             <ImageView
-                                android:id="@+id/photo_firebase"
+                                android:id="@+id/photo_main_firebase"
                                 android:layout_width="35dp"
-                                android:layout_height="35dp"
-                                android:src="@drawable/user_profile">
+                                android:layout_height="35dp">
 
                             </ImageView>
 
@@ -206,7 +237,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/status_profile"
+                            android:layout_below="@id/status_main_profile"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="1dp"
                             android:fontFamily="sans-serif-medium"
@@ -224,6 +255,7 @@
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
+
 
     </RelativeLayout>
 

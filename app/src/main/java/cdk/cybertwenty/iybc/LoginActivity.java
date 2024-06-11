@@ -76,12 +76,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.isSuccessful() && task.getResult()!=null){
                     if (task.getResult().getUser()!=null) {
                         reload();
-                        Toast.makeText(getApplicationContext(), "Welcome to Northden One Account!", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(getApplicationContext(), "Server sedang sibuk!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "The server cannot handle please wait!", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(),"Email atau Password anda salah!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Email or Password invalid!",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -108,5 +107,11 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent (LoginActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

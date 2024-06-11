@@ -40,16 +40,16 @@ public class HistoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (HistoryActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         account_btn_bar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (HistoryActivity.this, AccountInformation.class);
+                Intent intent = new Intent (HistoryActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -58,7 +58,7 @@ public class HistoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (HistoryActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }
@@ -67,6 +67,12 @@ public class HistoryActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent backIntent = new Intent(HistoryActivity.this, MainActivity.class);
         startActivity(backIntent);
-        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }
