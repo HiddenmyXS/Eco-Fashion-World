@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout view_myCart_btn;
     RelativeLayout profile_bottom_picture;
     ImageView photo_profile;
-    EditText search_content;
+    CardView search_card;
     CardView promo1, promo2, promo3;
     Button btn_product_1, btn_product_2;
 
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
         view_myCart_btn = (RelativeLayout) findViewById(R.id.view_myCart);
         profile_bottom_picture = (RelativeLayout) findViewById(R.id.profile_bottom_bar);
         photo_profile = (ImageView) findViewById(R.id.photo_main_firebase);
-        search_content = (EditText) findViewById(R.id.search_function);
         btn_product_1 = (Button) findViewById(R.id.product_button_1);
         btn_product_2 = (Button) findViewById(R.id.product_button_2);
+        search_card = (CardView) findViewById(R.id.search_cardview);
 
         // CardView promo //
         promo1 = (CardView) findViewById(R.id.promo_cardview_1);
@@ -132,13 +132,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        search_content.setOnClickListener(new View.OnClickListener() {
+        search_card.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
 
                 Intent intent = new Intent (MainActivity.this, SearchActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 

@@ -73,24 +73,36 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_toLeftOf="@id/header_function"
-                app:cardCornerRadius="5dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <EditText
-                        android:id="@+id/search_function"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Search Ecoprint Product"
-                        android:fontFamily="sans-serif-medium"
-                        android:textColorHint="@color/black"
-                        android:textColor="@color/black"
-                        android:background="@color/white"
-                        android:paddingLeft="10dp">
+                    <ImageView
+                        android:id="@+id/search_logo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/baseline_search_24">
 
-                    </EditText>
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/search_logo"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Search Ecoprint Product"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15dp">
+
+                    </TextView>
 
                 </RelativeLayout>
 
@@ -109,12 +121,12 @@
                 android:id="@+id/recommended_text_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="12dp"
                 android:text="Media in Ecoprint"
                 android:textSize="15dp"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/interdisplaybold"
                 android:textColor="@color/black">
             </TextView>
 
@@ -155,6 +167,8 @@
                                 android:id="@+id/image_promo_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginBottom="-15dp"
                                 android:src="@drawable/wool_wallpaper"
                                 android:transitionName="fade">
 
@@ -168,8 +182,8 @@
                             android:layout_below="@id/promo_cardview_1_image"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="15px"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="KAIN"
+                            android:fontFamily="@font/intermedium"
+                            android:text="Fabric"
                             android:textColor="@color/black"
                             android:textSize="15dp">
 
@@ -220,8 +234,8 @@
                             android:layout_below="@id/promo_cardview_2_image"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="15px"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="BAJU"
+                            android:fontFamily="@font/intermedium"
+                            android:text="Shirts"
                             android:textColor="@color/black"
                             android:textSize="15dp">
 
@@ -262,6 +276,8 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginBottom="-15dp"
                                 android:src="@drawable/bag_wallpaper">
 
                             </ImageView>
@@ -274,8 +290,8 @@
                             android:layout_below="@id/promo_cardview_3_image"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="15px"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="TAS"
+                            android:fontFamily="@font/intermedium"
+                            android:text="Bag"
                             android:textColor="@color/black"
                             android:textSize="15dp">
 
@@ -293,12 +309,12 @@
                 android:id="@+id/recommended_text_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="12dp"
                 android:layout_below="@id/categories_best_sale"
                 android:text="Category"
                 android:textSize="15dp"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/interdisplaybold"
                 android:textColor="@color/black">
             </TextView>
 
@@ -322,16 +338,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="-20dp"
+                            android:alpha="0.7"
+                            android:src="@drawable/bag">
+
+                        </ImageView>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bag Choice"
+                            android:text="Best Seller"
                             android:textSize="15dp"
                             android:textColor="@color/black"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="5dp"
-                            android:fontFamily="sans-serif-condensed-medium">
+                            android:fontFamily="@font/interdisplayregular">
 
                         </TextView>
 
@@ -351,6 +378,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="-20dp"
+                            android:alpha="0.7"
+                            android:src="@drawable/creative">
+
+                        </ImageView>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -360,7 +398,7 @@
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="5dp"
-                            android:fontFamily="sans-serif-condensed-medium">
+                            android:fontFamily="@font/interdisplayregular">
 
                         </TextView>
 
@@ -381,16 +419,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="-20dp"
+                            android:alpha="0.7"
+                            android:src="@drawable/feuilles">
+
+                        </ImageView>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Booth and Pants"
+                            android:text="Best Traditional"
                             android:textSize="15dp"
                             android:textColor="@color/black"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="5dp"
-                            android:fontFamily="sans-serif-condensed-medium">
+                            android:fontFamily="@font/interdisplayregular">
 
                         </TextView>
 
@@ -407,9 +456,9 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="12dp"
                 android:layout_below="@id/categories_by_products"
-                android:text="HOTS in Eco Fashion World!"
+                android:text="Now Trending"
                 android:textSize="15dp"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/interdisplaybold"
                 android:textColor="@color/black">
             </TextView>
 
