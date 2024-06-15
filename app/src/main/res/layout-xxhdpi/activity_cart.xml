@@ -47,11 +47,53 @@
             android:layout_below="@id/cart_header"
             android:layout_above="@id/bottom">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+            </androidx.recyclerview.widget.RecyclerView>
+            
+            <RelativeLayout
+                android:id="@+id/group_price"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/orderTotalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: Rp 100.000"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/interregular"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
             <RelativeLayout
                 android:id="@+id/empty_cart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="visible">
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/empty_image"

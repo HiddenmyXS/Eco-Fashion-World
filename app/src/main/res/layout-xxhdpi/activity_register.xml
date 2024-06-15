@@ -39,7 +39,7 @@
                     android:id="@+id/text_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hi Welcome back again!"
+                    android:text="Welcome!"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="23dp"
@@ -176,7 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/register_password"
-                    android:text="Re-Password"
+                    android:text="Confirm Password"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="14dp"
@@ -200,7 +200,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#8FFFFFFF"
-                        android:hint="Enter your re-password"
+                        android:hint="Enter your password"
                         android:padding="10dp"
                         android:inputType="textPassword">
 

@@ -80,6 +80,14 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/card_creative"
+                        android:layout_alignParentRight="true">
+
+                    </ImageView>
+
+                    <ImageView
                         android:id="@+id/search_logo"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -169,6 +177,8 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="-15dp"
                                 android:layout_marginBottom="-15dp"
+                                android:layout_marginLeft="-5dp"
+                                android:layout_marginRight="-5dp"
                                 android:src="@drawable/wool_wallpaper"
                                 android:transitionName="fade">
 
@@ -220,9 +230,11 @@
                             app:cardCornerRadius="8dp">
 
                             <ImageView
+                                android:id="@+id/image_promo_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/clothes_wallpaper">
+                                android:src="@drawable/clothes_wallpaper"
+                                android:transitionName="fade">
 
                             </ImageView>
 
@@ -274,10 +286,14 @@
                             app:cardCornerRadius="8dp">
 
                             <ImageView
+                                android:id="@+id/image_promo_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="-15dp"
+                                android:layout_marginLeft="-5dp"
+                                android:layout_marginRight="-5dp"
                                 android:layout_marginBottom="-15dp"
+                                android:transitionName="fade"
                                 android:src="@drawable/bag_wallpaper">
 
                             </ImageView>
@@ -323,6 +339,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_below="@id/recommended_text_2">
 
                 <androidx.cardview.widget.CardView
@@ -330,7 +347,9 @@
                     android:layout_width="330px"
                     android:layout_height="match_parent"
                     android:layout_toLeftOf="@id/categories_products_cardview_2"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="5dp"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="#ECECEC"
                     app:cardCornerRadius="10dp">
 
@@ -371,6 +390,7 @@
                     android:layout_width="330px"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="#ECECEC"
                     app:cardCornerRadius="10dp">
 
@@ -411,7 +431,9 @@
                     android:layout_width="330px"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
+                    android:layout_centerInParent="true"
                     android:layout_toRightOf="@id/categories_products_cardview_2"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="#ECECEC"
                     app:cardCornerRadius="10dp">
 
@@ -453,7 +475,7 @@
                 android:id="@+id/recommended_text_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="12dp"
                 android:layout_below="@id/categories_by_products"
                 android:text="Now Trending"

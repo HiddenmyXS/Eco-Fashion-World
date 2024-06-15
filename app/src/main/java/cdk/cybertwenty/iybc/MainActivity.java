@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         // Firebase //
 
         if (firebaseUser!=null){
-            photo_profile.setBackgroundResource(R.drawable.photo_profile_example);
+            photo_profile.setBackgroundResource(R.drawable.user_profile);
         } else {
             photo_profile.setBackgroundResource(R.drawable.user_profile);
         }
@@ -147,6 +147,20 @@ public class MainActivity extends AppCompatActivity {
         binding.promoCardview1.setOnClickListener(view -> {
             Intent intent = new Intent (MainActivity.this, Section1.class);
             ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, binding.imagePromo1, ViewCompat.getTransitionName(binding.imagePromo1)
+            );
+            startActivity(intent, optionsCompat.toBundle());
+        });
+
+        binding.promoCardview2.setOnClickListener(view -> {
+            Intent intent = new Intent (MainActivity.this, Section2.class);
+            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, binding.imagePromo2, ViewCompat.getTransitionName(binding.imagePromo2)
+            );
+            startActivity(intent, optionsCompat.toBundle());
+        });
+
+        binding.promoCardview3.setOnClickListener(view -> {
+            Intent intent = new Intent (MainActivity.this, Section3.class);
+            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, binding.imagePromo3, ViewCompat.getTransitionName(binding.imagePromo3)
             );
             startActivity(intent, optionsCompat.toBundle());
         });

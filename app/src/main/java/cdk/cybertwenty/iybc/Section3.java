@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import cdk.cybertwenty.iybc.databinding.ActivityMainBinding;
 
-public class Section2 extends AppCompatActivity {
+public class Section3 extends AppCompatActivity {
 
     ImageView btn_back;
     RelativeLayout view_cart, account, search;
@@ -26,7 +26,7 @@ public class Section2 extends AppCompatActivity {
         int UIOptions =
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(UIOptions);
-        setContentView(R.layout.section_2);
+        setContentView(R.layout.section_3);
 
         // Fade //
 
@@ -48,7 +48,7 @@ public class Section2 extends AppCompatActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backIntent = new Intent(Section2.this, LoginActivity.class);
+                Intent backIntent = new Intent(Section3.this, LoginActivity.class);
                 startActivity(backIntent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -57,7 +57,7 @@ public class Section2 extends AppCompatActivity {
         view_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backIntent = new Intent(Section2.this, MyCartActivity.class);
+                Intent backIntent = new Intent(Section3.this, MyCartActivity.class);
                 startActivity(backIntent);
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
@@ -67,7 +67,7 @@ public class Section2 extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backIntent = new Intent(Section2.this, MainActivity.class);
+                Intent backIntent = new Intent(Section3.this, MainActivity.class);
                 startActivity(backIntent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -77,7 +77,7 @@ public class Section2 extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        Intent backIntent = new Intent(Section2.this, MainActivity.class);
+        Intent backIntent = new Intent(Section3.this, MainActivity.class);
         startActivity(backIntent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

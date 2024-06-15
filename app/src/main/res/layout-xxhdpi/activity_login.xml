@@ -39,7 +39,7 @@
                     android:id="@+id/text_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hi Welcome back again!"
+                    android:text="Welcome!"
                     android:textColor="@color/black"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="23dp"

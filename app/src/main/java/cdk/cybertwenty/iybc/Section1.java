@@ -1,11 +1,13 @@
 package cdk.cybertwenty.iybc;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.transition.Fade;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +16,10 @@ import cdk.cybertwenty.iybc.databinding.ActivityMainBinding;
 
 public class Section1 extends AppCompatActivity {
 
+    SharedPreferences sharedPreferences;
     ImageView btn_back;
     RelativeLayout view_cart, account, search;
+    RatingBar rating;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -40,6 +44,7 @@ public class Section1 extends AppCompatActivity {
         btn_back = (ImageView) findViewById(R.id.btn_section_back);
         view_cart = (RelativeLayout) findViewById(R.id.view_myCart);
         account = (RelativeLayout) findViewById(R.id.view_my_Account);
+        rating = (RatingBar) findViewById(R.id.ratingBar);
 
         account.setOnClickListener(new View.OnClickListener() {
             @Override
