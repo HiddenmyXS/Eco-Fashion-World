@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/bill_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/btn_return_bill"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/history_name_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btn_return_bill"
+                android:text="Transaction Bill"
+                android:textSize="16dp"
+                android:fontFamily="@font/interdisplaymedium"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/body_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/bill_header">
+
+            <RelativeLayout
+                android:id="@+id/empty_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/empty_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/baseline_sentiment_very_dissatisfied_24">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/empty_image"
+                    android:text="Purchase first something to see your bill receipe"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

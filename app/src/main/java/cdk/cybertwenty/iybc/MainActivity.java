@@ -29,11 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseUser firebaseUser;
     private String collectData;
+    boolean popup_open = false;
 
     long exitTime = 0;
     RelativeLayout view_myHistory_btn;
     RelativeLayout view_myCart_btn;
+    RelativeLayout menu_bottom;
     RelativeLayout profile_bottom_picture;
+    RelativeLayout popup_menu_activity;
     ImageView photo_profile;
     CardView search_card;
     CardView promo1, promo2, promo3;
@@ -67,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Functions //
 
+        popup_menu_activity = (RelativeLayout) findViewById(R.id.pop_menu_activities);
         view_myHistory_btn = (RelativeLayout) findViewById(R.id.view_myHistory);
         view_myCart_btn = (RelativeLayout) findViewById(R.id.view_myCart);
+        menu_bottom = (RelativeLayout) findViewById(R.id.menu_bottom_bar);
         profile_bottom_picture = (RelativeLayout) findViewById(R.id.profile_bottom_bar);
         photo_profile = (ImageView) findViewById(R.id.photo_main_firebase);
         btn_product_1 = (Button) findViewById(R.id.product_button_1);
@@ -119,6 +124,20 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent (MainActivity.this, MyCartActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        menu_bottom.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                if (popup_open == false){
+                    popup_menu_activity.setVisibility(View.VISIBLE);
+                    popup_open = true;
+                } else if (popup_open == true){
+                    popup_menu_activity.setVisibility(View.INVISIBLE);
+                    popup_open = false;
+                }
             }
         });
 

@@ -33,7 +33,7 @@
                 android:layout_toRightOf="@id/btn_return_cart"
                 android:text="My Cart"
                 android:textSize="16dp"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">
 
             </TextView>

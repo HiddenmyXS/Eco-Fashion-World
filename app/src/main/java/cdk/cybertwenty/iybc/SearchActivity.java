@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SearchActivity extends AppCompatActivity {
 
-
     ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

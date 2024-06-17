@@ -26,6 +26,7 @@ public class AccountInformation extends AppCompatActivity {
     CardView btn_log_out;
     ImageView btn_return;
     TextView name_account_card, email_account_address;
+    RelativeLayout transaction, app_guide, help_center, settings_app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,10 @@ public class AccountInformation extends AppCompatActivity {
         home_btn = (RelativeLayout) findViewById(R.id.home_bottom_bar);
         btn_return = (ImageView) findViewById(R.id.btn_return_account);
         btn_log_out = (CardView) findViewById(R.id.btn_logout);
+        transaction = (RelativeLayout) findViewById(R.id.btn_transaction_account);
+        app_guide = (RelativeLayout) findViewById(R.id.btn_app_tour_account);
+        help_center = (RelativeLayout) findViewById(R.id.btn_help_account);
+        settings_app = (RelativeLayout) findViewById(R.id.btn_settings_account);
 
         // Firebase Current //
         firebaseAuth = FirebaseAuth.getInstance();
@@ -87,6 +92,43 @@ public class AccountInformation extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
             }
         });
+
+        // Preferences Settings //
+
+        transaction.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (AccountInformation.this, BillTransaction.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
+
+        help_center.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (AccountInformation.this, HelpActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
+
+        settings_app.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (AccountInformation.this, SettingsActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
+
+
+
+
+
     }
 
 

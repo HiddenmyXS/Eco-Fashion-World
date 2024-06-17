@@ -547,7 +547,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/product_package_1"
-                                android:text="Rp 200.000"
+                                android:text="Rp 160.000"
                                 android:textSize="17dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:textColor="@color/black"
@@ -559,7 +559,7 @@
                                 android:id="@+id/id_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bag Creative Motive"
+                                android:text="Shopping Bag Creative"
                                 android:textSize="17dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:textColor="@color/black"
@@ -574,7 +574,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/id_1"
-                                android:text="New Arrival! Checkout this!"
+                                android:text="New Arrival shopping bag!"
                                 android:textSize="15dp"
                                 android:fontFamily="sans-serif"
                                 android:textColor="@color/black"
@@ -635,7 +635,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/product_package_2"
-                                android:text="Rp 175.000"
+                                android:text="Rp 200.000"
                                 android:textSize="17dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:textColor="@color/black"
@@ -647,7 +647,7 @@
                                 android:id="@+id/id_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kain Katun Creative"
+                                android:text="Wool Fabric Creative"
                                 android:textSize="17dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:textColor="@color/black"
@@ -662,7 +662,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/id_3"
-                                android:text="Sleek Wool! New in market!"
+                                android:text="Sleek and Modern design"
                                 android:textSize="15dp"
                                 android:fontFamily="sans-serif"
                                 android:textColor="@color/black"
@@ -687,21 +687,6 @@
 
                         </RelativeLayout>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </ViewFlipper>
                     
                 </RelativeLayout>
@@ -709,6 +694,133 @@
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_menu_activities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom"
+            android:visibility="invisible">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/request_pop_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:id="@+id/requst_text"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_question_mark_24"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Request"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/intermedium"
+                            android:layout_toRightOf="@id/requst_text"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/notification_pop_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/request_pop_menu">
+
+                        <ImageView
+                            android:id="@+id/notification_text"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_notifications_active_24"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notification"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/intermedium"
+                            android:layout_toRightOf="@id/notification_text"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/forum_pop_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/notification_pop_menu">
+
+                        <ImageView
+                            android:id="@+id/forum_text"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_question_answer_24"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Forum Community"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/intermedium"
+                            android:layout_toRightOf="@id/forum_text"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
 
         <RelativeLayout
             android:id="@+id/bottom"
@@ -856,7 +968,6 @@
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
-
 
     </RelativeLayout>
 

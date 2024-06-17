@@ -31,7 +31,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/btn_return_history"
-                android:text="History Purchase"
+                android:text="Best Seller"
                 android:textSize="16dp"
                 android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">
@@ -46,34 +46,6 @@
             android:layout_height="match_parent"
             android:layout_below="@id/history_header"
             android:layout_above="@+id/bottom">
-
-            <RelativeLayout
-                android:id="@+id/empty_transaction"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="visible">
-
-                <ImageView
-                    android:id="@+id/empty_image"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/baseline_checklist_24">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_below="@id/empty_image"
-                    android:text="No transaction. Purchase something to view your receipe"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="@color/black">
-
-                </TextView>
-
-            </RelativeLayout>
 
         </RelativeLayout>
 

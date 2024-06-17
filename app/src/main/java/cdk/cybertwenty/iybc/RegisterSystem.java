@@ -71,7 +71,7 @@ public class RegisterSystem extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (RegisterSystem.this, LoginActivity.class);
                 startActivity(intent);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -113,6 +113,7 @@ public class RegisterSystem extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent (RegisterSystem.this, LoginActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         finish();
     }
 

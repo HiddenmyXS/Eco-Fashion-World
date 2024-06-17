@@ -33,7 +33,7 @@
                 android:layout_toRightOf="@id/btn_return_account"
                 android:text="My Account"
                 android:textSize="16dp"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">
 
             </TextView>
@@ -69,7 +69,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
+                            android:fontFamily="@font/interdisplaymedium"
                             android:textStyle="italic"
                             android:text="MY MEMBERSHIP CARD"
                             android:textSize="12dp"
@@ -159,7 +159,7 @@
                 android:id="@+id/text_in_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/interdisplaymedium"
                 android:text="Preference and Settings"
                 android:layout_below="@id/cardview_about_account"
                 android:layout_marginTop="2dp"
@@ -198,12 +198,12 @@
 
                             <ImageView
                                 android:id="@+id/transaction_image"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
                                 android:layout_alignParentLeft="true"
-                                android:layout_marginLeft="10dp"
-                                android:src="@drawable/baseline_list_alt_24">
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/card_bill">
 
                             </ImageView>
 
@@ -213,7 +213,7 @@
                                 android:layout_toRightOf="@id/transaction_image"
                                 android:layout_centerInParent="true"
                                 android:layout_marginLeft="10dp"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/intermedium"
                                 android:text="Transaction Bill"
                                 android:textColor="@color/black">
 
@@ -233,12 +233,12 @@
 
                             <ImageView
                                 android:id="@+id/app_tour_image"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
                                 android:layout_alignParentLeft="true"
-                                android:layout_marginLeft="10dp"
-                                android:src="@drawable/baseline_list_alt_24">
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/card_tour">
 
                             </ImageView>
 
@@ -248,8 +248,8 @@
                                 android:layout_toRightOf="@id/app_tour_image"
                                 android:layout_centerInParent="true"
                                 android:layout_marginLeft="10dp"
-                                android:fontFamily="sans-serif-medium"
-                                android:text="Discovery this app"
+                                android:fontFamily="@font/intermedium"
+                                android:text="App Tour"
                                 android:textColor="@color/black">
 
                             </TextView>
@@ -267,12 +267,12 @@
 
                             <ImageView
                                 android:id="@+id/help_image"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
                                 android:layout_alignParentLeft="true"
-                                android:layout_marginLeft="10dp"
-                                android:src="@drawable/baseline_list_alt_24">
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/card_help">
 
                             </ImageView>
 
@@ -282,7 +282,7 @@
                                 android:layout_toRightOf="@id/help_image"
                                 android:layout_centerInParent="true"
                                 android:layout_marginLeft="10dp"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/intermedium"
                                 android:text="Help"
                                 android:textColor="@color/black">
 
@@ -302,12 +302,12 @@
 
                             <ImageView
                                 android:id="@+id/settings_image"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
                                 android:layout_alignParentLeft="true"
-                                android:layout_marginLeft="10dp"
-                                android:src="@drawable/baseline_list_alt_24">
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/card_settings">
 
                             </ImageView>
 
@@ -317,7 +317,7 @@
                                 android:layout_toRightOf="@id/settings_image"
                                 android:layout_centerInParent="true"
                                 android:layout_marginLeft="10dp"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/intermedium"
                                 android:text="Settings"
                                 android:textColor="@color/black">
 
