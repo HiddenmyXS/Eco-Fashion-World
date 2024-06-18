@@ -9,7 +9,7 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/help_header"
+            android:id="@+id/settings_header"
             android:layout_width="match_parent"
             android:layout_height="40dp">
 
@@ -31,7 +31,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/btn_return_help"
-                android:text="Help Center"
+                android:text="Langguage Selection"
                 android:textSize="16dp"
                 android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">
@@ -41,10 +41,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/body_help"
+            android:id="@+id/body_settings"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/help_header">
+            android:layout_below="@id/settings_header">
 
             <ImageView
                 android:layout_width="200dp"
@@ -52,102 +52,75 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:alpha="0.4"
-                android:src="@drawable/card_help"
+                android:src="@drawable/card_language"
                 android:layout_marginRight="-30dp"
                 android:layout_marginBottom="-30dp">
 
             </ImageView>
 
             <RelativeLayout
-                android:id="@+id/section_help_1"
+                android:id="@+id/english"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp">
 
+                <ImageView
+                    android:id="@+id/checklist_english"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_done_24"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="visible">
+
+                </ImageView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interregular"
-                    android:text="Submit a Report"
+                    android:text="English (United States)"
                     android:textSize="15dp"
-                    android:textColor="#E41111"
-                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/checklist_english"
                     android:layout_centerInParent="true"
-                    android:layout_marginLeft="20dp">
+                    android:layout_marginLeft="10dp">
 
                 </TextView>
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp">
-
-                </ImageView>
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/section_help_2"
+                android:id="@+id/indonesia"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_below="@id/section_help_1">
+                android:layout_below="@id/english">
+
+                <ImageView
+                    android:id="@+id/checklist_indonesia"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_done_24"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="invisible">
+
+                </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interregular"
-                    android:text="Frequently Asked Questions"
+                    android:text="Indonesian (beta)"
                     android:textSize="15dp"
                     android:textColor="@color/black"
-                    android:layout_alignParentLeft="true"
+                    android:layout_toRightOf="@id/checklist_indonesia"
                     android:layout_centerInParent="true"
-                    android:layout_marginLeft="20dp">
+                    android:layout_marginLeft="10dp">
 
                 </TextView>
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp">
-
-                </ImageView>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/section_help_3"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_below="@id/section_help_2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interregular"
-                    android:text="Contact Us"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginLeft="20dp">
-
-                </TextView>
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp">
-
-                </ImageView>
 
             </RelativeLayout>
 

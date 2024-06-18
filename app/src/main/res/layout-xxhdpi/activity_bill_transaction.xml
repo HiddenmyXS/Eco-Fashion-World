@@ -53,6 +53,18 @@
                 android:visibility="visible">
 
                 <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:alpha="0.4"
+                    android:src="@drawable/card_bill"
+                    android:layout_marginRight="-30dp"
+                    android:layout_marginBottom="-30dp">
+
+                </ImageView>
+
+                <ImageView
                     android:id="@+id/empty_image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"

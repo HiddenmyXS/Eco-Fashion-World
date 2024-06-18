@@ -30,16 +30,23 @@ public class SettingsActivity extends AppCompatActivity{
 
         // Sections //
 
-        section_2.setOnClickListener(new View.OnClickListener() {
+        section_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (SettingsActivity.this, DeleteAcccountActivity.class);
+                Intent intent = new Intent (SettingsActivity.this, LanguageActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
-
+        section_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (SettingsActivity.this, DeleteAccountActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
 
         return_btn.setOnClickListener(new View.OnClickListener() {
             @Override

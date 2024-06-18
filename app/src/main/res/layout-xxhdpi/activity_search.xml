@@ -29,17 +29,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <EditText
+                    <SearchView
+                        android:id="@+id/searchViewer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Search Ecoprint Product"
-                        android:fontFamily="sans-serif-medium"
+                        android:background="@color/white"
+                        android:hint="Find best item for you"
                         android:textColorHint="@color/black"
                         android:textColor="@color/black"
-                        android:background="@color/white"
-                        android:paddingLeft="10dp">
+                        android:fontFamily="@font/intermedium">
 
-                    </EditText>
+                    </SearchView>
+
+                    <ImageView
+                        android:id="@+id/recommended_picture_search"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/card_creative">
+
+                    </ImageView>
 
                 </RelativeLayout>
 
@@ -55,11 +64,34 @@
             android:layout_marginTop="-2dp"
             android:layout_marginBottom="2dp">
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:listitem="@layout/list_item">
 
-            </ListView>
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/not_found"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:text="No matched found"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/interdisplaymedium"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+            </RelativeLayout>
 
         </RelativeLayout>
 

@@ -14,7 +14,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class DeleteAcccountActivity extends AppCompatActivity {
+public class DeleteAccountActivity extends AppCompatActivity {
     private FirebaseUser firebaseUser;
     private FirebaseAuth auth;
 
@@ -45,7 +45,7 @@ public class DeleteAcccountActivity extends AppCompatActivity {
         return_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (DeleteAcccountActivity.this, AccountInformation.class);
+                Intent intent = new Intent (DeleteAccountActivity.this, SettingsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -58,7 +58,7 @@ public class DeleteAcccountActivity extends AppCompatActivity {
                 user.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(DeleteAcccountActivity.this,"Account Successfully deleted..",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DeleteAccountActivity.this,"Account Successfully deleted..",Toast.LENGTH_SHORT).show();
                         auth.signOut();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();
@@ -70,7 +70,7 @@ public class DeleteAcccountActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent (DeleteAcccountActivity.this, AccountInformation.class);
+        Intent intent = new Intent (DeleteAccountActivity.this, SettingsActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

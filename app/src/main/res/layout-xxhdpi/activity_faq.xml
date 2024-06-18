@@ -14,7 +14,7 @@
             android:layout_height="40dp">
 
             <ImageView
-                android:id="@+id/btn_return_help"
+                android:id="@+id/btn_return_faq"
                 android:layout_width="35dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="7dp"
@@ -30,8 +30,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/btn_return_help"
-                android:text="Help Center"
+                android:layout_toRightOf="@id/btn_return_faq"
+                android:text="Frequently Asked Questions"
                 android:textSize="16dp"
                 android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">
@@ -59,7 +59,7 @@
             </ImageView>
 
             <RelativeLayout
-                android:id="@+id/section_help_1"
+                android:id="@+id/faq_section_1"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp">
@@ -68,38 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interregular"
-                    android:text="Submit a Report"
-                    android:textSize="15dp"
-                    android:textColor="#E41111"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginLeft="20dp">
-
-                </TextView>
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp">
-
-                </ImageView>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/section_help_2"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_below="@id/section_help_1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interregular"
-                    android:text="Frequently Asked Questions"
+                    android:text="My app lag or crash"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_alignParentLeft="true"
@@ -121,16 +90,78 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/section_help_3"
+                android:id="@+id/faq_section_2"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_below="@id/section_help_2">
+                android:layout_below="@id/faq_section_1">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interregular"
-                    android:text="Contact Us"
+                    android:text="I cannot access or log in to app"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/faq_section_3"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/faq_section_2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/interregular"
+                    android:text="Refund Loyalty Program"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/faq_section_4"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/faq_section_3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/interregular"
+                    android:text="How to secure my account?"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_alignParentLeft="true"

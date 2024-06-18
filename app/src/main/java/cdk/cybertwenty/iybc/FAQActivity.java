@@ -8,8 +8,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NotificationActivity extends AppCompatActivity {
-
+public class FAQActivity extends AppCompatActivity {
     ImageView return_btn;
 
     @Override
@@ -20,14 +19,14 @@ public class NotificationActivity extends AppCompatActivity {
         int UIOptions =
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(UIOptions);
-        setContentView(R.layout.activity_notification);
+        setContentView(R.layout.activity_faq);
 
-        return_btn = (ImageView) findViewById(R.id.btn_return_notification);
+        return_btn = (ImageView) findViewById(R.id.btn_return_faq);
 
         return_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (NotificationActivity.this, MainActivity.class);
+                Intent intent = new Intent (FAQActivity.this, HelpActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -36,9 +35,8 @@ public class NotificationActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent (NotificationActivity.this, MainActivity.class);
+        Intent intent = new Intent (FAQActivity.this, HelpActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
-
 }

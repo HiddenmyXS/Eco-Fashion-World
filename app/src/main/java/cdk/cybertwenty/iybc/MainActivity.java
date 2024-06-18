@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout menu_bottom;
     RelativeLayout profile_bottom_picture;
     RelativeLayout popup_menu_activity;
+    RelativeLayout forum, notification, request;
     ImageView photo_profile;
     CardView search_card;
     CardView promo1, promo2, promo3;
@@ -79,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         btn_product_1 = (Button) findViewById(R.id.product_button_1);
         btn_product_2 = (Button) findViewById(R.id.product_button_2);
         search_card = (CardView) findViewById(R.id.search_cardview);
+        forum = (RelativeLayout) findViewById(R.id.forum_pop_menu);
+        notification = (RelativeLayout) findViewById(R.id.notification_pop_menu);
+        request = (RelativeLayout) findViewById(R.id.request_pop_menu);
 
         // CardView promo //
         promo1 = (CardView) findViewById(R.id.promo_cardview_1);
@@ -122,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MainActivity.this, MyCartActivity.class);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 startActivity(intent);
                 finish();
             }
@@ -160,6 +165,21 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
+
+        // Pop Up Menu Bottom //
+
+        notification.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (MainActivity.this, NotificationActivity.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
         // Promo CardView //
 

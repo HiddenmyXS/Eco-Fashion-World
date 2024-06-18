@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -18,7 +17,19 @@
         android:hardwareAccelerated="true"
         tools:targetApi="31">
         <activity
-            android:name=".DeleteAcccountActivity"
+            android:name=".FAQActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="true"/>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="true"/>
+        <activity
+            android:name=".LanguageActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="true"/>
+        <activity
+            android:name=".DeleteAccountActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:exported="true"/>
         <activity

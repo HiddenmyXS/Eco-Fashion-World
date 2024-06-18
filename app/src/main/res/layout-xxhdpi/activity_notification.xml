@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/settings_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/btn_return_notification"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/history_name_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btn_return_notification"
+                android:text="Notification"
+                android:textSize="16dp"
+                android:fontFamily="@font/interdisplaymedium"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/body_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/settings_header">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:alpha="0.4"
+                android:src="@drawable/card_notification"
+                android:layout_marginRight="-30dp"
+                android:layout_marginBottom="-30dp">
+
+            </ImageView>
+
+            <RelativeLayout
+                android:id="@+id/notification_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/checklist_english"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/card_forum"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="15dp"
+                            android:visibility="visible">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/notif_text_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/interregular"
+                            android:text="Welcome to Eco Fashion World"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:layout_toRightOf="@id/checklist_english"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/interregular"
+                            android:text="Thank you for choosing our service feel free to report any problem!"
+                            android:textSize="12dp"
+                            android:textColor="@color/black"
+                            android:layout_toRightOf="@id/checklist_english"
+                            android:layout_below="@id/notif_text_1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/interregular"
+                            android:text="Send by System"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
