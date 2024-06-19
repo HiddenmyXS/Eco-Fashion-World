@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText username, password;
     Button btn_click_login;
-
+    ImageView quick_btn;
     TextView create_account;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         btn_click_login = (Button) findViewById(R.id.btn_login);
         create_account = (TextView) findViewById(R.id.btn_create_account);
+        quick_btn = (ImageView) findViewById(R.id.quick_help_btn);
 
 
         // onClick //
@@ -66,6 +68,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        quick_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(LoginActivity.this, QuickHelpActivity.class);
+                startActivity(myintent);
+                finish();
+            }
+        });
 
     }
 

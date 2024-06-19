@@ -31,7 +31,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/btn_return_help"
-                android:text="Langguage Selection"
+                android:text="Language Selection"
                 android:textSize="16dp"
                 android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">

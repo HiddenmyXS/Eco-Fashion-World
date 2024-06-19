@@ -14,7 +14,7 @@
             android:layout_height="40dp">
 
             <ImageView
-                android:id="@+id/btn_return_seller"
+                android:id="@+id/btn_return_creativity"
                 android:layout_width="35dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="7dp"
@@ -30,8 +30,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/btn_return_seller"
-                android:text="Best Seller"
+                android:layout_toRightOf="@id/btn_return_creativity"
+                android:text="Best Creativity"
                 android:textSize="16dp"
                 android:fontFamily="@font/interdisplaymedium"
                 android:textColor="@color/black">
@@ -87,7 +87,7 @@
                                 android:layout_marginBottom="-10dp"
                                 android:layout_marginLeft="-10dp"
                                 android:layout_marginRight="-10dp"
-                                android:src="@drawable/bag_wallpaper_3">
+                                android:src="@drawable/hat_wallpaper_1">
 
                             </ImageView>
 
@@ -102,7 +102,7 @@
                             android:layout_marginLeft="10dp"
                             android:layout_centerInParent="true"
                             android:layout_alignParentLeft="true"
-                            android:text="Slim Totebag"
+                            android:text="Adventure Ecoprint"
                             android:textSize="16dp"
                             android:fontFamily="@font/interdisplaymedium"
                             android:textColor="@color/black">
@@ -117,7 +117,7 @@
                             android:layout_marginLeft="10dp"
                             android:layout_centerInParent="true"
                             android:layout_alignParentLeft="true"
-                            android:text="Rp 125.000"
+                            android:text="Rp 40.000"
                             android:textSize="13dp"
                             android:fontFamily="@font/interdisplaymedium"
                             android:textColor="@color/black">
@@ -163,7 +163,7 @@
                             android:layout_marginBottom="-10dp"
                             android:layout_marginLeft="-10dp"
                             android:layout_marginRight="-10dp"
-                            android:src="@drawable/mask_wallpaper_1">
+                            android:src="@drawable/clothes_wallpaper">
 
                         </ImageView>
 
@@ -178,7 +178,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_centerInParent="true"
                         android:layout_alignParentLeft="true"
-                        android:text="Green Mask"
+                        android:text="Go Green Shirts"
                         android:textSize="16dp"
                         android:fontFamily="@font/interdisplaymedium"
                         android:textColor="@color/black">
@@ -193,7 +193,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_centerInParent="true"
                         android:layout_alignParentLeft="true"
-                        android:text="Rp 35.000"
+                        android:text="Rp 300.000"
                         android:textSize="13dp"
                         android:fontFamily="@font/interdisplaymedium"
                         android:textColor="@color/black">
@@ -354,7 +354,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:alpha="0.4"
-                android:src="@drawable/bag"
+                android:src="@drawable/creative"
                 android:layout_marginRight="-30dp"
                 android:layout_marginBottom="-30dp">
 

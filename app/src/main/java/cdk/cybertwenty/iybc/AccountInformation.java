@@ -22,11 +22,15 @@ public class AccountInformation extends AppCompatActivity {
 
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
+    boolean popup_open = false;
     RelativeLayout home_btn;
     CardView btn_log_out;
     ImageView btn_return;
     TextView name_account_card, email_account_address;
     RelativeLayout transaction, app_guide, help_center, settings_app;
+    RelativeLayout forum, notification, request;
+    RelativeLayout menu_bottom;
+    RelativeLayout popup_menu_activitys;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,11 @@ public class AccountInformation extends AppCompatActivity {
         app_guide = (RelativeLayout) findViewById(R.id.btn_app_tour_account);
         help_center = (RelativeLayout) findViewById(R.id.btn_help_account);
         settings_app = (RelativeLayout) findViewById(R.id.btn_settings_account);
+        popup_menu_activitys = (RelativeLayout) findViewById(R.id.pop_menu_activity);
+        menu_bottom = (RelativeLayout) findViewById(R.id.menu_bottom_bar);
+        forum = (RelativeLayout) findViewById(R.id.forum_popup_menu);
+        notification = (RelativeLayout) findViewById(R.id.notification_popup_menu);
+        request = (RelativeLayout) findViewById(R.id.request_popup_menu);
 
         // Firebase Current //
         firebaseAuth = FirebaseAuth.getInstance();
@@ -93,6 +102,20 @@ public class AccountInformation extends AppCompatActivity {
             }
         });
 
+        menu_bottom.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                if (popup_open == false){
+                    popup_menu_activitys.setVisibility(View.VISIBLE);
+                    popup_open = true;
+                } else if (popup_open == true){
+                    popup_menu_activitys.setVisibility(View.INVISIBLE);
+                    popup_open = false;
+                }
+            }
+        });
+
         // Preferences Settings //
 
         transaction.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +145,30 @@ public class AccountInformation extends AppCompatActivity {
                 Intent intent = new Intent (AccountInformation.this, SettingsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
+
+        // Pop Up Menu Bottom //
+
+        request.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (AccountInformation.this, RequestActivity.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (AccountInformation.this, NotificationActivity.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
             }
         });
 

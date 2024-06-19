@@ -11,6 +11,6 @@ public class MyItem {
     };
 
     static String[] subHeadline = {
-            "Great for daily use","Revolution Shirt with new eco friendly", "Traditional Wool Fabric with new motive"
+            "Rp 160.000","Rp 300.000", "Rp 200.000"
     };
 }

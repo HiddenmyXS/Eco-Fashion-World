@@ -23,6 +23,8 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.checkerframework.checker.units.qual.C;
+
 import cdk.cybertwenty.iybc.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser firebaseUser;
     private String collectData;
     boolean popup_open = false;
-
     long exitTime = 0;
     RelativeLayout view_myHistory_btn;
     RelativeLayout view_myCart_btn;
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout forum, notification, request;
     ImageView photo_profile;
     CardView search_card;
-    CardView promo1, promo2, promo3;
+    CardView categories_1, categories_2, categories_3;
+
     Button btn_product_1, btn_product_2;
 
     @Override
@@ -84,8 +86,34 @@ public class MainActivity extends AppCompatActivity {
         notification = (RelativeLayout) findViewById(R.id.notification_pop_menu);
         request = (RelativeLayout) findViewById(R.id.request_pop_menu);
 
-        // CardView promo //
-        promo1 = (CardView) findViewById(R.id.promo_cardview_1);
+        // Categories //
+        categories_1 = (CardView) findViewById(R.id.categories_products_cardview_1);
+        categories_2 = (CardView) findViewById(R.id.categories_products_cardview_2);
+        categories_3 = (CardView) findViewById(R.id.categories_products_cardview_3);
+
+        // Categories Click //
+
+        categories_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this, BestSellerActivity.class);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        categories_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this, BestCreativityActivity.class);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
         // Firebase //
 
@@ -167,6 +195,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Pop Up Menu Bottom //
+
+        request.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+                Intent intent = new Intent (MainActivity.this, RequestActivity.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         notification.setOnClickListener(new View.OnClickListener() {
 

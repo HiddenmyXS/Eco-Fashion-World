@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/history_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/btn_return_request"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/history_name_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btn_return_request"
+                android:text="Request"
+                android:textSize="16dp"
+                android:fontFamily="@font/interdisplaymedium"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/body_request"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/history_header"
+            android:layout_above="@+id/bottom">
+
+            <TextView
+                android:id="@+id/title_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Request Program!"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interextrabold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Here you can request another item not listed in app"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/title_request">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_desc_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please following the instruction to eligible request:"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/sub_request">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_desc_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Send the name of product with picture"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/sub_desc_1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_desc_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Our team will send the form. fill the blank forum with details(name, size, picture and quantity)"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/sub_desc_2">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_desc_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Before to proceed our team will check again the forum"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/sub_desc_3">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_desc_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Our team will send method payment"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/sub_desc_4">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_desc_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Request item it will take 6-14 days after you payment success"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/sub_desc_5">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:alpha="0.4"
+                android:src="@drawable/card_request"
+                android:layout_marginRight="-30dp"
+                android:layout_marginBottom="-30dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

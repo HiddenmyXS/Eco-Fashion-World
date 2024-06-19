@@ -11,14 +11,16 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import cdk.cybertwenty.iybc.databinding.ActivityMainBinding;
 
 public class Section2 extends AppCompatActivity {
 
-    ImageView btn_back;
+    ImageView btn_back, display;
     RelativeLayout view_cart, account, search;
     RatingBar rating;
+    CardView  preview_1, preview_2, preview_3;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -44,6 +46,36 @@ public class Section2 extends AppCompatActivity {
         view_cart = (RelativeLayout) findViewById(R.id.view_myCart);
         account = (RelativeLayout) findViewById(R.id.view_my_Account);
         rating = (RatingBar) findViewById(R.id.ratingBar);
+
+        // CardView //
+
+        display = (ImageView) findViewById(R.id.select_preview);
+        preview_1 = (CardView) findViewById(R.id.image_preview_3);
+        preview_2 = (CardView) findViewById(R.id.image_preview_2);
+        preview_3 = (CardView) findViewById(R.id.image_preview_1);
+
+        // CardView Preview Btn //
+
+        preview_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                display.setImageResource(R.drawable.shirts_1);
+            }
+        });
+
+        preview_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                display.setImageResource(R.drawable.clothes_wallpaper);
+            }
+        });
+
+        preview_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                display.setImageResource(R.drawable.shirts_2);
+            }
+        });
 
         account.setOnClickListener(new View.OnClickListener() {
             @Override

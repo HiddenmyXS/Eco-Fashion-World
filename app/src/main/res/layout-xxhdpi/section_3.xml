@@ -292,6 +292,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:visibility="invisible"
                     android:layout_below="@id/size_1">
 
                     <androidx.cardview.widget.CardView
@@ -366,7 +367,7 @@
                                 android:layout_centerInParent="true"
                                 android:fontFamily="sans-serif-medium"
                                 android:text="3XL"
-                                android:textColor="@color/black"
+                                android:textColor="#434343"
                                 android:textSize="14dp">
 
                             </TextView>
@@ -399,6 +400,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/bag_wallpaper_3">
+
+                        </ImageView>
+
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -418,7 +426,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/card_background_2">
+                            android:src="@drawable/bag_wallpaper_2">
 
                         </ImageView>
 
@@ -441,7 +449,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/wool_wallpaper">
+                            android:src="@drawable/bag_wallpaper">
 
                         </ImageView>
 
@@ -639,6 +647,7 @@
                     app:cardCornerRadius="8dp">
 
                     <ImageView
+                        android:id="@+id/display"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="-30dp"
